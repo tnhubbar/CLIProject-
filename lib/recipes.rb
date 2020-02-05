@@ -1,0 +1,8 @@
+class CLIProject::Recipes 
+
+
+
+
+
+
+end 

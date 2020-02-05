@@ -1,0 +1,9 @@
+Steps
+1 run bundle gem CLI_project 
+2 Comment out gemspec in Gemfile 
+    a. we only need a gemspec if we are going to actually turn this into a gem. 
+3. Add gems (in our case pry and httparty) and run bundle install. 
+4. Rename 'pokemon.rb' file to be 'environment.rb'
+   a. Add required gems and AND files here. 
+    i. We need to add the required gems here because using Bundler.setup will break the gem if we decide to make it an official gem. 
+5. Add files for classes - namespace with module 
