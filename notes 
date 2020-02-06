@@ -7,3 +7,13 @@ Steps
    a. Add required gems and AND files here. 
     i. We need to add the required gems here because using Bundler.setup will break the gem if we decide to make it an official gem. 
 5. Add files for classes - namespace with module 
+6. We also need to have our project in github 
+7. So run 'git init' 
+then go to github and create a new repository with the green button. This will give you the option to sync up your local environment with github. (It should have you do git remote add origin and git push)
+then do git add . 
+then do git commit -m "initial commit"  (this will be your initial commit)
+After that anytime you make a change you will do git add . and then do git commit -m "with a message of what changes you did".
+and then do git push. 
+All done! 
+
+
