@@ -1,37 +1,44 @@
 class CLIProject::Recipes 
-    attr_accessor :calories, :meals, :title, :nutrients
+    attr_accessor :calories, :meals, :title, :id, :nutrients 
 
-    @@all = []
+    @@response =
 
 
     def initialize(api_response)
-       api_response.each{|key, value|
-        begin 
-          self.send(("#{key}="), value)
-          @@all<<self 
-        rescue NoMethodError 
-        end }
+    api_response.each do |key, value|
+    puts "Your #{key} are:" 
+    value.each do |value, info|
+        if value.class != Hash
+    puts "#{value} : #{info}"
+       
+    end 
+    end 
+    end
+end  
+   
+
+
+    def title=(api_response)
+
     end 
 
-    def calories
-        @calories
+    def nutrients=()
+        api_response[1]
     end 
 
-    def nutrients 
-        @nutrients
-    end 
-
-    def self.all 
-        @@all
-    end 
-
-    def get_recipes_by_calories(calories)
-        self.all.detect do |recipes|
-            recipes.calories == 2000
-        end  
-    end 
+    
 
     #user_recipes = CLIProject::Recipes.new(api_response)
 
 
 end 
+
+#api_response.each do |key, value|
+ #   puts "Your #{key} are:" 
+  #  value.each do |value, info|
+   #     if value == "calories" || "protein" || "fat" || "carbohydrates"
+    #puts "#{value} : #{info}"
+       
+    #end 
+    #end 
+    #end 
