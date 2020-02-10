@@ -10,6 +10,7 @@ class CLIProject::Recipes
     value.each do |value, info|
         if value.class != Hash
     puts "#{value} : #{info}"
+      
        
     end 
     end 
