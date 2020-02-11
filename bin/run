@@ -2,4 +2,4 @@
 
 require_relative '../lib/environment'
 
-CLIProject::Recipe_controller.new
+CLIProject::Wine_controller.new
