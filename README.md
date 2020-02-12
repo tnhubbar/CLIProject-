@@ -19,7 +19,7 @@ Or install it yourself as:
 
 ## Usage
 
-To use, run ruby bin/run. It will prompt you to answer questions. Afterward, you can type exit to exit. 
+To use, run ruby bin/run. This app will tell you what foods pair well with specific wines. It will prompt you to answer the questions of what wine you would like to drink and then it will give you information regarding that wine and what it pairs well with. Afterward, you can type exit to exit, or you can type in another wine. 
 
 ## Development
 

@@ -27,9 +27,8 @@ end
 def welcome_message
     puts " "
     puts "Welcome to the Wine Pairing App!"
-    sleep 1 
     puts "We will make sure your wine is paired correctly for success."
-    puts "Which wine would you like to drink tonight? Or type exit to end."
+    puts "Please type which wine would you like to drink tonight? Or type exit to end."
     puts " "
 end 
 def exit
