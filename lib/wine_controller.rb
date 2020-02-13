@@ -16,7 +16,7 @@ end
 
 def error
     puts "However, that wine is not recognized."
-    puts "Please enter another wine or type exit to exit"
+    puts "Please enter another wine or type exit to exit."
 end 
 
 def prompt_user 
@@ -28,7 +28,7 @@ def welcome_message
     puts " "
     puts "Welcome to the Wine Pairing App!"
     puts "We will make sure your wine is paired correctly for success."
-    puts "Please type which wine would you like to drink tonight? Or type exit to end."
+    puts "Please type which wine you would like to drink tonight? Or type exit to end."
     puts " "
 end 
 def exit
