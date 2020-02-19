@@ -3,23 +3,16 @@
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'CLI_project'
-```
+Clone this repository. 
 
 And then execute:
 
     $ bundle install
 
-Or install it yourself as:
-
-    $ gem install CLI_project
 
 ## Usage
 
-To use, run ruby bin/run. This app will tell you what foods pair well with specific wines. It will prompt you to answer the questions of what wine you would like to drink and then it will give you information regarding that wine and what it pairs well with. Afterward, you can type exit to exit, or you can type in another wine. 
+To use, run  bin/run. This app will tell you what foods pair well with specific wines. It will prompt you to answer the questions of what wine you would like to drink and then it will give you information regarding that wine and what it pairs well with. Afterward, you can type exit to exit, or you can type in another wine. 
 
 ## Development
 
