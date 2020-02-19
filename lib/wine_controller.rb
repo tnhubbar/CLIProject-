@@ -1,5 +1,5 @@
 class CLIProject::Wine_controller
-    attr_accessor 
+    
 
 def initialize
     self.run
@@ -20,7 +20,7 @@ def error
 end 
 
 def prompt_user 
-    puts "Is there another wine you'd like to drink tonight?"
+    puts "Is there another wine you'd like to drink tonight? If not, please type exit."
     processing_answer
 end 
 

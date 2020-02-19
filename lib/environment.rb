@@ -8,5 +8,5 @@ require_relative './API.rb'
 
 module CLIProject
   class Error < StandardError; end
-  # Your code goes here...
+  
 end
