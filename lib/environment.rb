@@ -6,7 +6,4 @@ require_relative './wine_controller.rb'
 require_relative './API.rb'
 
 
-module CLIProject
-  class Error < StandardError; end
-  
-end
+
