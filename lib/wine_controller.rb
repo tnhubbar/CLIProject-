@@ -2,12 +2,14 @@ class CLIProject::Wine_controller
     
 
 def initialize
+    CLIProject::Wine.find_or_create_by_name("merlot")
     self.run
 end 
    
  
 def run 
     welcome_message 
+    
 
     processing_answer
 
@@ -33,6 +35,14 @@ def welcome_message
 end 
 def exit
     abort
+end 
+
+def wine_list
+    puts "1. Merlot"
+    puts "2. Moscato"
+    puts "3. Riesling"
+    puts "4. Pinot Grigio"
+    puts "5. Pinot Nior"
 end 
 
 def processing_answer
