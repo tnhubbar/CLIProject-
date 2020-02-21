@@ -8,12 +8,15 @@ class CLIProject::Wine
         @name = response["text"].split(' ').first 
         @@wines << self 
     end 
-     
  
+    
 
     def self.all
        @@wines
     end 
+
+ 
+
     
     def self.find_or_create_by_name(name)
         if self.all.find {|wine| wine.name == name } 
@@ -25,6 +28,6 @@ class CLIProject::Wine
         puts user_wine.description 
        end 
     end 
-
+# binding.pry 
 
 end 
