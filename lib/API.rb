@@ -36,36 +36,36 @@ class CLIProject::API
         "X-RapidAPI-Key" => "c1316768abmsh89f8e89879289f6p16f69ejsn8a84bbc79579"
       } 
 
-      response2 = HTTParty.get "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/wine/dishes?wine=chardonnay",
+      response2 = HTTParty.get "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/wine/dishes?wine=moscato",
       headers:{
         "X-RapidAPI-Host" => "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
         "X-RapidAPI-Key" => "c1316768abmsh89f8e89879289f6p16f69ejsn8a84bbc79579"
       } 
 
-      response3 = HTTParty.get "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/wine/dishes?wine=pinot noir",
+      response3 = HTTParty.get "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/wine/dishes?wine=riesling",
       headers:{
         "X-RapidAPI-Host" => "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
         "X-RapidAPI-Key" => "c1316768abmsh89f8e89879289f6p16f69ejsn8a84bbc79579"
       } 
 
-      response4 = HTTParty.get "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/wine/dishes?wine=riesling",
+      response4 = HTTParty.get "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/wine/dishes?wine=chardonnay",
       headers:{
         "X-RapidAPI-Host" => "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
         "X-RapidAPI-Key" => "c1316768abmsh89f8e89879289f6p16f69ejsn8a84bbc79579"
       } 
 
-      response5 = HTTParty.get "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/wine/dishes?wine=moscato",
+      response5 = HTTParty.get "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/wine/dishes?wine=syrah",
       headers:{
         "X-RapidAPI-Host" => "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
         "X-RapidAPI-Key" => "c1316768abmsh89f8e89879289f6p16f69ejsn8a84bbc79579"
       } 
      
 
-      user_wine1 = CLIProject::Wine.new(response1)
-      user_wine2 = CLIProject::Wine.new(response2)
-      user_wine3 = CLIProject::Wine.new(response3)
-      user_wine4 = CLIProject::Wine.new(response4)
-      user_wine5 = CLIProject::Wine.new(response5)
+      merlot = CLIProject::Wine.new(response1)
+      chardonnay = CLIProject::Wine.new(response2)
+      pinot = CLIProject::Wine.new(response3)
+      riesling = CLIProject::Wine.new(response4)
+      moscato = CLIProject::Wine.new(response5)
       
 
      end 
