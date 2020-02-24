@@ -2,13 +2,31 @@
 
 class CLIProject::API
 
-  def self.get_pairings_for_wine(input)
-  HTTParty.get "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/wine/dishes?wine=#{input}",
-  headers:{
-    "X-RapidAPI-Host" => "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-    "X-RapidAPI-Key" => "c1316768abmsh89f8e89879289f6p16f69ejsn8a84bbc79579"
-  }
+  def self.make_request(input)
+    HTTParty.get "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/wine/dishes?wine=#{input}",
+    headers:{
+      "X-RapidAPI-Host" => "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+      "X-RapidAPI-Key" => "c1316768abmsh89f8e89879289f6p16f69ejsn8a84bbc79579"
+    }
+  end
 
+  def self.handle_response(response)
+    if response["status"] == "failure"
+      puts "However, that wine is not recognized."
+      puts "Please enter another wine or type exit to exit."
+    end 
+  end
+
+  def self.get_pairings_for_wine(name_or_number)
+    HTTParty.get "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/wine/dishes?wine=#{name_or_number}",
+    headers:{
+      "X-RapidAPI-Host" => "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+      "X-RapidAPI-Key" => "c1316768abmsh89f8e89879289f6p16f69ejsn8a84bbc79579"
+    }
+
+    #response = make_request(input)
+    #handle_response(response)
+    
    end 
 
    def self.get_initial_pairings_for_wine
@@ -48,6 +66,7 @@ class CLIProject::API
       user_wine3 = CLIProject::Wine.new(response3)
       user_wine4 = CLIProject::Wine.new(response4)
       user_wine5 = CLIProject::Wine.new(response5)
+      
 
      end 
 

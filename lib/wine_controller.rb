@@ -14,6 +14,7 @@ def run
     
 
     processing_answer
+    prompt_user
 
    
 end 
@@ -29,7 +30,8 @@ end
 
 
 def prompt_user 
-    puts "Is there another wine you'd like to drink tonight? If not, please type exit."
+    puts "Is there another wine you'd like to drink tonight?"
+    puts "If yes, please enter the corresponding number or wine. If not, please type exit."
     processing_answer
 end 
 
@@ -50,28 +52,22 @@ def wine_list
     puts "2. Moscato"
     puts "3. Riesling"
     puts "4. Chardonnay"
-    puts "5. Pinot Noir"
+    puts "5. Syrah"
 end 
 
 def processing_answer
     input = gets.strip
 
     puts "Great choice!"
-    response = CLIProject::API.get_pairings_for_wine(input)
     if input == "exit"
         puts "Toodles!"
         sleep 1
         exit 
-    elsif response["status"] == "failure"
-        error
-        processing_answer
-    elsif response["text"]
-        user_wine = CLIProject::Wine.new(response)
-        puts "#{user_wine.description}"
-        prompt_user
-    else 
-        processing_answer
-    end 
+    else
+    response = CLIProject::Wine.find_or_create_by_name(input)
+   
+   
+     end 
 end 
 
 end 
